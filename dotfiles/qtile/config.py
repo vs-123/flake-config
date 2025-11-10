@@ -82,6 +82,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Flameshot"),
+    Key([mod], "q", lazy.spawn("rofi -show drun"), desc="Rofi Desktop Run"),
 ]
 
 # Add key bindings to switch VTs in Wayland.

@@ -23,6 +23,9 @@
     # pkgs.hello
     pkgs.btop
     pkgs.flameshot
+    pkgs.lazygit
+    pkgs.rofi
+    pkgs.xwallpaper
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -75,6 +78,13 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+  
+  home.activation = {
+    setWallpaper = ''
+    ${pkgs.xwallpaper}/bin/xwallpaper --zoom ${./wallpapers/wp1.jpg} &
+    '';
+  };
+   
 
   programs = {
     firefox.enable = true;
