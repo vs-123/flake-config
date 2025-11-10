@@ -22,6 +22,7 @@
     # # "Hello, world!" when run.
     # pkgs.hello
     pkgs.btop
+    pkgs.flameshot
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -44,6 +45,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+    ".bashrc".source = ./dotfiles/bashrc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
