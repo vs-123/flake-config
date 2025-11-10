@@ -1,0 +1,19 @@
+set nu rnu
+syntax on
+
+colo habamax
+
+set tabstop=3 shiftwidth=3 expandtab
+set scrolloff=3
+set virtualedit=all
+
+let mapleader=' '
+
+nnoremap <silent> <leader>h gT
+nnoremap <silent> <leader>l gt
+nnoremap <silent> <leader>q :tabclose<CR>
+nnoremap <silent> <leader>n :tabnew<CR>
+nnoremap <silent> <leader>t :term<CR>
+
+cnoremap <C-a> <HOME>
+cnoremap <C-e> <END>

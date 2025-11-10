@@ -46,6 +46,7 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
     ".bashrc".source = ./dotfiles/bashrc;
+    ".vimrc".source = ./dotfiles/vimrc;
     ".config/qtile" = {source = ./dotfiles/qtile; recursive=true;};
 
     # # You can also set the file content immediately.
