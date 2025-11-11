@@ -25,7 +25,6 @@
     pkgs.flameshot
     pkgs.lazygit
     pkgs.rofi
-    pkgs.xwallpaper
     pkgs.fastfetch
     pkgs.tree
     pkgs.alacritty
@@ -54,6 +53,7 @@
     ".bashrc".source = ./dotfiles/bashrc;
     ".vimrc".source = ./dotfiles/vimrc;
     ".config/qtile" = {source = ./dotfiles/qtile; recursive=true;};
+    ".background-image".source = ./wallpapers/wp1.jpg;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -81,13 +81,6 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-  
-  home.activation = {
-    setWallpaper = ''
-    ${pkgs.xwallpaper}/bin/xwallpaper --zoom ${./wallpapers/wp1.jpg} &
-    '';
-  };
-   
 
   programs = {
     firefox.enable = true;

@@ -27,7 +27,7 @@
 import os
 
 import libqtile.resources
-from libqtile import bar, layout, qtile, widget
+from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -235,3 +235,12 @@ wl_xcursor_size = 24
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+@hook.subscribe.startup_once
+def autostart():
+    wallpaper_path = os.path.expanduser("~/.background-image")
+    # subprocess.Popen(["xwallpaper", "--zoom", wallpaper_path])
+    if qtile.screens:
+       for screen in qtile.screens:
+          screen.set_wallpaper(wallpaper_path, mode='fill')
+
