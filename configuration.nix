@@ -2,12 +2,13 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, home-manager, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      home-manager.nixosModules.home-manager
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -43,9 +44,6 @@
     autoRepeatInterval = 50;
   };
 
-
-  
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -64,14 +62,16 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
+  home-manager.backupFileExtension = "bak-1";
+  home-manager.users.neb = {
+    imports = [./home.nix];
+    home.stateVersion = "25.05";
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.neb = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-      alacritty
-    ];
   };
 
   # programs.firefox.enable = true;

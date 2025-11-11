@@ -15,14 +15,17 @@
       nebnix = lib.nixosSystem {
         system = "aarch64-linux";
         modules = [./configuration.nix];
+        specialArgs = {inherit home-manager;};
       };
     };
 
+/*
     homeConfigurations = {
       neb = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."aarch64-linux";
         modules = [./home.nix];
       };
     };
+*/
   };
 }
