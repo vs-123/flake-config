@@ -40,8 +40,9 @@
   services.xserver = {
     enable = true;
     windowManager.qtile.enable = true;
-    autoRepeatDelay = 200;
-    autoRepeatInterval = 50;
+    desktopManager.xfce.enable = true;
+    # autoRepeatDelay = 200;
+    # autoRepeatInterval = 50;
   };
 
   # Configure keymap in X11

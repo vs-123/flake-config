@@ -28,6 +28,8 @@
     pkgs.fastfetch
     pkgs.tree
     pkgs.alacritty
+    pkgs.xorg.xrandr
+    pkgs.libxcvt
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -53,7 +55,7 @@
     ".bashrc".source = ./dotfiles/bashrc;
     ".vimrc".source = ./dotfiles/vimrc;
     ".config/qtile" = {source = ./dotfiles/qtile; recursive=true;};
-    ".background-image".source = ./wallpapers/wp1.jpg;
+    ".background-image".source = ./wallpapers/wp2.jpg;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
