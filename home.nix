@@ -54,7 +54,8 @@
     # ".screenrc".source = dotfiles/screenrc;
     ".bashrc".source = ./dotfiles/bashrc;
     ".vimrc".source = ./dotfiles/vimrc;
-    ".config/qtile" = {source = ./dotfiles/qtile; recursive=true;};
+    ".config/qtile" = {source = ./dotfiles/config/qtile; recursive=true;};
+    ".config/xfce4" = {source = ./dotfiles/config/xfce4; recursive=true;};
     ".background-image".source = ./wallpapers/wp2.jpg;
 
     # # You can also set the file content immediately.
