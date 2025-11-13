@@ -30,6 +30,7 @@
     pkgs.alacritty
     pkgs.xorg.xrandr
     pkgs.libxcvt
+    pkgs.librewolf
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -83,10 +84,6 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-  };
-
-  programs = {
-    firefox.enable = true;
   };
 
   # Let Home Manager install and manage itself.
