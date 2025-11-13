@@ -1,4 +1,6 @@
 alias ls='ls -F -a --color=auto'
 alias ll='ls -l'
 
-alias hmsf='home-manager switch --flake . -b backup'
+cateval() {
+   eval "$(cat $1)"
+}
