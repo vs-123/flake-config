@@ -1,6 +1,8 @@
 set nu rnu
-set incsearch hlsearch
+set mouse=a
 syntax on
+
+set incsearch hlsearch
 
 colo habamax
 
