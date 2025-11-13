@@ -50,7 +50,6 @@
 
     # Directories
     ".config/qtile" = {source = ./dotfiles/config/qtile; recursive=true;};
-    ".config/xfce4" = {source = ./dotfiles/config/xfce4; recursive=true;};
     "Pictures/Wallpapers" = {source = ./wallpapers; recursive=true;};
   };
 
