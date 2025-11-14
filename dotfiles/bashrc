@@ -4,3 +4,5 @@ alias ll='ls -l'
 cateval() {
    eval "$(cat $1)"
 }
+
+PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h \[\e[31m\]:: \[\e[36m\]\w\n\[\e[33m\]%\[\e[0m\] "

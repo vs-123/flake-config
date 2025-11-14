@@ -42,7 +42,6 @@
 
    home.file = {
       # Files
-      ".bashrc".source = ./dotfiles/bashrc;
       ".vimrc".source = ./dotfiles/vimrc;
 
       # Directories
@@ -100,9 +99,13 @@
    #   /etc/profiles/per-user/neb/etc/profile.d/hm-session-vars.sh
    #
    home.sessionVariables = {
-      # EDITOR = "emacs";
+      EDITOR = "vim";
    };
 
+   programs.bash = {
+      enable = true;
+      initExtra = builtins.readFile ./dotfiles/bashrc;
+   };
    # Let Home Manager install and manage itself.
    programs.home-manager.enable = true;
 }
