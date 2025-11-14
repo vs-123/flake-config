@@ -51,12 +51,23 @@
    
    xfconf.settings = {
       xfce4-desktop = {
-         "backdrop/screen0/monitorVirtual-1/workspace0/last-image" = "/home/neb/Pictures/Wallpapers/wp2.jpg";
+         "backdrop/screen0/monitorVirtual-1/workspace0/last-image" =
+            "/home/neb/Pictures/Wallpapers/wp2.jpg";
       };      
       xfce4-keyboard-shortcuts = {
          "commands/default/<Alt>s" = "xfce4-appfinder";
          "commands/default/<Alt><Shift>s" = "flameshot gui";
          "commands/custom/<Alt><Shift>s" = "flameshot gui";
+      };
+      xfce4-panel = {
+         "panels" = [1];
+         "panels/size" = 18;
+         "plugins/plugin-8/digital-layout" = 2;
+         "plugins/plugin-8/mode" = 4;
+         "plugins/plugin-8/show-seconds" = true;
+      };
+     xfwm4 = {
+         "general/button_layout" = "CMHS|O";
       };
    };
 
