@@ -50,6 +50,13 @@
    };
    
    xfconf.settings = {
+      pointers = {
+         "VirtualBox_USB_Tablet/ReverseScrolling" = true;
+      };
+      keyboards = {
+         "Default/KeyRepeat/Delay" = 200;
+         "Default/KeyRepeat/Rate" = 50;
+      };
       xfce4-desktop = {
          "backdrop/screen0/monitorVirtual-1/workspace0/last-image" =
             "/home/neb/Pictures/Wallpapers/wp2.jpg";
@@ -58,6 +65,8 @@
          "commands/default/<Alt>s" = "xfce4-appfinder";
          "commands/default/<Alt><Shift>s" = "flameshot gui";
          "commands/custom/<Alt><Shift>s" = "flameshot gui";
+         "xfwm4/default/<Alt>W" = "close_window_key";
+         "xfwm4/custom/<Alt>W" = "close_window_key";
       };
       xfce4-panel = {
          "panels" = [1];
@@ -68,6 +77,8 @@
       };
      xfwm4 = {
          "general/button_layout" = "CMHS|O";
+         "general/frame_opacity" = 85;
+         "general/inactive_opacity" = 85;
       };
    };
 
