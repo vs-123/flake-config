@@ -1,5 +1,8 @@
 alias ls='ls -F -a --color=auto'
 alias ll='ls -l'
+alias sf='sudo nixos-rebuild switch --flake'
+alias bf='sudo nixos-rebuild boot --flake'
+alias cdf='cd $(find /etc/ /home/ -type d -name "flake-config" 2>/dev/null)'
 
 cateval() {
    eval "$(cat $1)"
