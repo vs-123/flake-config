@@ -1,12 +1,8 @@
 #!/bin/bash
 
-# "xrandr --newmode $modeline_res"
-# "xrandr --addmode $display_output $modename"
-# "xrandr --output $display_output $modename"
-
-echo "======================================"
-echo "===== RESOLUTION SETTER BY vs-12 ====="
-echo "======================================"
+echo "======================================="
+echo "===== RESOLUTION SETTER BY vs-123 ====="
+echo "======================================="
 
 echo "* This is temporary"
 echo ""
