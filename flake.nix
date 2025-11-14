@@ -7,25 +7,13 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
-  let
-    lib = nixpkgs.lib;
-  in {
+  outputs = { self, nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      nebnix = lib.nixosSystem {
+      nebnix = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [./configuration.nix];
         specialArgs = {inherit home-manager;};
       };
     };
-
-/*
-    homeConfigurations = {
-      neb = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."aarch64-linux";
-        modules = [./home.nix];
-      };
-    };
-*/
   };
 }
