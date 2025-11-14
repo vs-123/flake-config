@@ -53,6 +53,11 @@
       xfce4-desktop = {
          "backdrop/screen0/monitorVirtual-1/workspace0/last-image" = "/home/neb/Pictures/Wallpapers/wp2.jpg";
       };      
+      xfce4-keyboard-shortcuts = {
+         "commands/default/<Alt>s" = "xfce4-appfinder";
+         "commands/default/<Alt><Shift>s" = "flameshot gui";
+         "commands/custom/<Alt><Shift>s" = "flameshot gui";
+      };
    };
 
    # Home Manager can also manage your environment variables through
